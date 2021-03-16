@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="customer" class="com.ofss.Customer">
+		<property name="customerName" value="Guru"></property>
+		<property name="address" ref="address"></property>
+		<property name="Products">
+			<list>
+				<ref bean="product1"/>
+				<ref bean="product2"/>
+				<ref bean="product1"/>
+			</list>
+		</property>
+		
+		
+	</bean>
+
+
+	<bean id="address" class="com.oracle.Address">
+		<property name="flatNo" value="123"></property>
+		<property name="streetName" value="MG Road"></property>
+		<property name="city" value="Bangalore"></property>
+		<property name="zipCode" value="560102"></property>
+	</bean>
+
+
+	<bean id="product1" class="com.oracle.Product">
+		<property name="productId" value="1"></property>
+		<property name="productName" value="Laptop"></property>
+		<property name="productPrice" value="35000"></property>
+	</bean>
+
+	<bean id="product2" class="com.oracle.Product">
+		<property name="productId" value="2"></property>
+		<property name="productName" value="iPhone"></property>
+		<property name="productPrice" value="75000"></property>
+	</bean>
+
+	<bean id="product3" class="com.oracle.Product">
+		<property name="productId" value="3"></property>
+		<property name="productName" value="Gaming Laptop"></property>
+		<property name="productPrice" value="250000"></property>
+	</bean>
+	
+</beans>
